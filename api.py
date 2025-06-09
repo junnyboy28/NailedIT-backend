@@ -54,6 +54,8 @@ app.add_middleware(
 # Set up directory structure
 os.makedirs("runs/detect/train/weights", exist_ok=True)
 os.makedirs("uploads", exist_ok=True)
+# Make sure directories are writable
+os.chmod("uploads", 0o777)
 
 class EvaluationRequest(BaseModel):
     test_dir: str
@@ -140,4 +142,5 @@ async def evaluate(request: EvaluationRequest):
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("api:app", host="0.0.0.0", port=port, reload=True)
+    print(f"Starting server on port {port}")  # Add this for debugging
+    uvicorn.run("api:app", host="0.0.0.0", port=port)  # Remove reload=True in production
