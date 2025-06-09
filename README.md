@@ -19,7 +19,7 @@ This API provides nail detection, measurement, and matching capabilities using c
 
 1. Clone this repository:
 
-git clone https://github.com/YourUsername/nail-detection-api.git cd nail-detection-api
+git clone git clone https://github.com/junnyboy28/NailedIT-backend.git
 
 2. Install dependencies:
 

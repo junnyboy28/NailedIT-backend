@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: nail-detection-api
+    env: python
+    buildCommand: pip install -r requirements_backend.txt
+    startCommand: python api.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9
