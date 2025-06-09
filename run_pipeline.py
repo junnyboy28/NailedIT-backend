@@ -8,6 +8,11 @@ import csv
 
 # === Config ===
 MODEL_PATH = "runs/detect/train/weights/best.pt"
+# Fallback to yolov8n.pt if best.pt is not available
+if not os.path.exists(MODEL_PATH):
+    MODEL_PATH = "yolov8n.pt"
+    print(f"Warning: Using fallback model {MODEL_PATH}")
+
 PIXELS_PER_MM = 10  # Assumption: 10 pixels = 1 mm
 WEIGHT_CONSTANT = 0.002  # weight (g) = height_mm * constant
 TOLERANCE = 2  # mm and grams
