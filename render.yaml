@@ -3,7 +3,7 @@ services:
     name: nail-detection-api
     env: python
     buildCommand: pip install -r requirements_backend.txt
-    startCommand: python api.py
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.9

@@ -60,6 +60,16 @@ os.chmod("uploads", 0o777)
 class EvaluationRequest(BaseModel):
     test_dir: str
 
+@app.get("/")
+async def root():
+    """Health check endpoint"""
+    return {"message": "Nail Detection API is running"}
+
+@app.get("/health")
+async def health():
+    """Health check endpoint"""
+    return {"status": "healthy"}
+
 @app.post("/api/detect")
 async def detect_nails(
     file: UploadFile = File(...),
@@ -140,7 +150,14 @@ async def evaluate(request: EvaluationRequest):
     }
 
 if __name__ == "__main__":
-    import os
+    # Get port from environment variable (Render sets this)
     port = int(os.environ.get("PORT", 8000))
-    print(f"Starting server on port {port}")  # Add this for debugging
-    uvicorn.run("api:app", host="0.0.0.0", port=port)  # Remove reload=True in production
+    print(f"Starting server on port {port}")
+    
+    # Use app string reference instead of app object for better compatibility
+    uvicorn.run(
+        "api:app",  # This should match your filename
+        host="0.0.0.0",  # Listen on all interfaces
+        port=port,
+        log_level="info"
+    )
