@@ -1,0 +1,6 @@
+path: C:\Users\jimil\OneDrive\Documents\nail_dataset
+train: images/train
+val: images/val
+
+names:
+  0: nail

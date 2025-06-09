@@ -1,0 +1,32 @@
+# Dataset files
+synthetic_images/
+backgrounds/
+nails_cutouts/
+images/
+labels/
+__pycache__/
+runs/*/exp*/
+runs/detect/train/*
+!runs/detect/train/weights/
+runs/detect/train/weights/*
+!runs/detect/train/weights/best.pt
+
+# Local uploads and test results
+uploads/
+*_output.jpg
+*_results.csv
+*_analysis.png
+
+# ML model weights (large files)
+*.pt
+!yolov8n.pt  # Include the base model
+!runs/detect/train/weights/best.pt  # Include our trained model
+
+# Environment
+venv/
+.env
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db

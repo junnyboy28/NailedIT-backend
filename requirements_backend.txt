@@ -1,0 +1,11 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+python-multipart>=0.0.5
+pydantic>=1.8.2
+ultralytics
+opencv-python
+numpy
+scikit-learn
+pillow
+matplotlib
+pandas
