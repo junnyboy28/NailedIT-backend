@@ -1,6 +1,9 @@
-# Nail Detection and Analysis API
+# NailedIT - Nail Detection and Analysis API
 
 This API provides nail detection, measurement, and matching capabilities using computer vision and machine learning.
+Running live on: https://naileditai.netlify.app/
+frontend repo: https://github.com/junnyboy28/NailedIT-frontend
+check my portfolio: https://jimilportfolio.vercel.app 
 
 ## Features
 
