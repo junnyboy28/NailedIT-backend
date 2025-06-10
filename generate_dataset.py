@@ -142,4 +142,4 @@ for i in range(NUM_SYNTHETIC_IMAGES):
     if i % 50 == 0:
         print(f"[{i}] images generated...")
 
-print(f"\n✅ Done! {NUM_SYNTHETIC_IMAGES} images + labels generated.")
+print(f"\n✅ Done! {NUM_SYNTHETIC_IMAGES} images + labels generated.")  
